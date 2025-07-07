@@ -1,0 +1,10 @@
+@forbidden_files {
+    file
+    path *.env .envrc */.* *.bak *~ /.htaccess /.htpasswd /.user.ini
+}
+respond @forbidden_files 403
+
+@forbidden_folders {
+    path /.git/
+}
+respond @forbidden_folders 403
