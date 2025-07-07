@@ -4,37 +4,23 @@ WordPress specific Caddy configurations, tips and tricks.
 
 ## Features
 
+TODO
+
 ## Available (vhost) Templates
 
-+ WP Super Cache plugin (with support for SSL and separate mobile cache)
-+ WP Rocket cache plugin (SSL and / or mobile supported out of the box)
-+ WP Fastest Cache plugin (SSL and / or mobile supported out of the box)
-+ Multisite (sub-domain and sub-directory)
-+ Varnish with Nginx for SSL termination.
-+ Custom error pages.
-+ [Catchall template](https://github.com/pothi/wordpress-nginx/blob/main/sites-available/catchall.conf).
++ [Catchall template](https://github.com/pothi/caddy-wp/blob/main/sites/default.caddy).
 
 If you'd like to include something else, create a pull request.
 
 ## Performance
 
-+ All static content have maximum expiration headers.
-+ SSL session cache is enabled by default.
-+ Brotli compression support.
-+ Open file cache support.
-+ Server-level 301 support (for http => https, non-www => www, etc).
-+ [Autoptimize](https://wordpress.org/plugins/autoptimize/) support.
+ToBeFilled
 
 ## Security
 
-+ Support for [strong dhparam](https://weakdh.org/).
-+ TLSv1 and other insecure protocols are disabled by default.
-+ Mitigate [httpoxy](https://httpoxy.org/) vulnerability.
 + [HSTS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) support.
-+ Security headers to fit most sites (no CSP, though, as it varies depending on the site).
-+ All hidden and backup files are forbidden by default.
-+ Passes most security features in [Sonar Scanner](https://sonarwhal.com/scanner/).
-+ Gets 'A+' grade in [Qualys SSL Labs](https://www.ssllabs.com/ssltest/).
++ Security headers to fit most sites (no CSP).
++ Hidden and backup files are forbidden by default. If any pattern is missing, please send a pull-request.
 
 ## Compatibility
 

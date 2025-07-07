@@ -4,9 +4,11 @@
         body "Error code: 404.1 - Site Not Found"
     }
 
+    import /etc/caddy/globals/security-headers.caddy
+
     # optional logging - safe to ignore
 	log {
-		output file /var/log/caddy/access.log
+		output file /var/log/caddy/access.json
 	}
 }
 
