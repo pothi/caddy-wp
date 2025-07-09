@@ -1,3 +1,4 @@
+# global configuration to be applied for all sites
 {
     # https://caddyserver.com/docs/caddyfile/options#metrics
     # metrics {
@@ -16,7 +17,7 @@
         format console
     }
 
-    # if you use FrankenPHP, you may use the following file
+    # some FrankenPHP defaults are mentioned in the file
     # import /etc/caddy/globals/frankenphp.caddy
 
     # https://caddyserver.com/docs/caddyfile/options#timeouts
@@ -30,13 +31,10 @@
 
         # Cloudflare support
         # safe to keep it even if the site isn't behind Cloudflare proxy
-        import /etc/caddy/globals/cloudflare.conf
+        import /etc/caddy/globals/cloudflare.caddy
 	}
 
 }
 
-# configure wildcard domains before using individual domains
-# import /etc/caddy/wildcard-example.com.caddy-sample
-
-# sites
+# site templates
 import /etc/caddy/sites/*.caddy
