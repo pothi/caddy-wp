@@ -12,6 +12,6 @@ header {
 	X-Content-Type-Options nosniff
 
 	# clickjacking protection
-	X-Frame-Options DENY
+	X-Frame-Options SAMEORIGIN
 }
 
