@@ -8,3 +8,8 @@ respond @forbidden_files 403
     path /.git/
 }
 respond @forbidden_folders 403
+
+# if certbot is used to get/renew certificates
+handle /.well-known/acme-challenge/* {
+    file_server
+}
