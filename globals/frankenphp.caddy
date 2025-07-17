@@ -1,0 +1,14 @@
+frankenphp {
+    php_ini {
+        memory_limit        512M
+        max_execution_time  15
+        upload_max_filesize 32M
+        post_max_size       32M
+        max_input_vars      5000
+
+        # perf
+        # https://github.com/php/frankenphp/discussions/1701#discussioncomment-13620384
+        mysqlnd.collect_statistics off
+
+    }
+}
